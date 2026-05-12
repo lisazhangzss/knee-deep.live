@@ -1528,6 +1528,10 @@ const IFRAME_URL = 'https://itch.io/embed-upload/17289707?color=0d0820';
 var loadTimerInterval = null;
 var loadStartTime = null;
 
+function isMobile() {
+  return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || window.innerWidth < 768;
+}
+
 function loadGame() {
   const cover = document.getElementById('game-cover');
   const wrapper = document.getElementById('game-wrapper');
@@ -1535,6 +1539,30 @@ function loadGame() {
   const banner = document.getElementById('game-loading-banner');
   const timerEl = document.getElementById('load-timer');
   const footerNote = document.getElementById('game-footer-note');
+
+  // Mobile: block game load, show desktop-only message
+  if (isMobile()) {
+    cover.style.display = 'none';
+    wrapper.style.display = 'block';
+    frame.style.display = 'none';
+    if (banner) banner.style.display = 'none';
+    // Replace iframe area with mobile message
+    var existingMsg = document.getElementById('mobile-game-msg');
+    if (!existingMsg) {
+      var msg = document.createElement('div');
+      msg.id = 'mobile-game-msg';
+      msg.style.cssText = 'width:100%;aspect-ratio:16/9;background:var(--dark2);border-radius:14px 14px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;';
+      msg.innerHTML = '<div style="font-size:2.5rem;">🖥️</div>'
+        + '<div style="font-family:Nunito,sans-serif;font-weight:800;font-size:1.1rem;color:var(--text);">Desktop Required</div>'
+        + '<div style="color:var(--text-muted);font-size:.875rem;line-height:1.65;max-width:300px;">This visual novel runs in a desktop browser.<br>Please visit <strong style="color:var(--primary)">knee-deep.live</strong> on your computer to play.</div>'
+        + '<button onclick="closeGame()" style="margin-top:8px;background:var(--primary);color:#fff;border:none;padding:10px 24px;border-radius:24px;font-family:Nunito,sans-serif;font-weight:700;font-size:.9rem;cursor:pointer;">← Go Back</button>';
+      wrapper.insertBefore(msg, frame);
+    } else {
+      existingMsg.style.display = 'flex';
+    }
+    wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
 
   cover.style.display = 'none';
   wrapper.style.display = 'block';
@@ -1572,6 +1600,8 @@ function closeGame() {
   frame.src = '';
   const banner = document.getElementById('game-loading-banner');
   if (banner) banner.style.display = 'none';
+  const mobileMsg = document.getElementById('mobile-game-msg');
+  if (mobileMsg) mobileMsg.style.display = 'none';
   const timerEl = document.getElementById('load-timer');
   if (timerEl) timerEl.textContent = '0s elapsed';
   const footerNote = document.getElementById('game-footer-note');
