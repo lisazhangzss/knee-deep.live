@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knee Deep! In Love Free Online – Play Yandere Visual Novel Demo | knee-deep.live</title>
+<meta name="description" content="Play Knee Deep! In Love free online – a yandere visual novel set at Pebblestone University. Romance, horror, and dangerous obsession. Three yanderes, one you. Play the demo now!">
+<link rel="canonical" href="https://knee-deep.live/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://knee-deep.live/">
+<meta property="og:title" content="Knee Deep! In Love Free Online – Yandere Visual Novel Demo">
+<meta property="og:description" content="Three yanderes are better than one. Play the free Knee Deep! In Love demo online – a dark romance visual novel with horror, mystery, and obsession.">
+<meta property="og:image" content="https://img.itch.zone/aW1nLzI2NjYxMzQ3LnBuZw==/original/69KrCn.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Knee Deep! In Love Free Online – Yandere Visual Novel Demo">
+<meta name="twitter:description" content="Three yanderes are better than one. Play the free demo online now.">
+<meta name="twitter:image" content="https://img.itch.zone/aW1nLzI2NjYxMzQ3LnBuZw==/original/69KrCn.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Knee Deep! In Love",
+  "description": "A yandere visual novel set at Pebblestone University. Navigate campus life while discovering that Milo, Anthony, and Rylee are all willing to kill for you. Features dark romance, psychological horror, and multiple endings.",
+  "genre": ["Visual Novel", "Dating Sim", "Horror", "Romance", "Yandere"],
+  "gamePlatform": ["Browser", "Windows", "macOS", "Linux", "Android"],
+  "author": {
+    "@type": "Organization",
+    "name": "Comfort Kuma Studios"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "931",
+    "bestRating": "5"
+  },
+  "inLanguage": ["en", "zh-Hans", "es"],
+  "contentRating": "Mature 16+",
+  "url": "https://knee-deep.live/"
+}
+</script>
+
+<!-- GA4 — replace G-XXXXXXXXXX with your Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" data-cfasync="false"></script>
+<script data-cfasync="false">
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- AdSense placeholder -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+<style>
+/* ── 色板：与官方 itch.io 视觉对齐 ── */
+:root {
+  --primary: #f0507a;        /* 热粉 logo 同款 */
+  --primary-dark: #c83060;
+  --primary-glow: rgba(240,80,122,0.4);
+  --primary-soft: rgba(240,80,122,0.12);
+  --gold: #f0b040;           /* 封面暖金灯光 */
+  --gold-glow: rgba(240,176,64,0.3);
+  --peach: #f5d8c0;          /* UI 奶桃 */
+  --dark: #150d2a;           /* 深靛蓝导航 */
+  --dark2: #0d0820;
+  --bg: #0d0820;             /* 近黑紫底 */
+  --bg2: #130c24;
+  --bg3: #1c1140;
+  --card: #1c1140;
+  --card2: #241550;
+  --border: #2d1a4a;
+  --border-soft: rgba(255,255,255,0.06);
+  --text: #f5eaff;
+  --text-muted: #b090d0;
+  --text-dim: #7050a0;
+  --star: #f0b040;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+h1,h2,h3,h4 {
+  font-family: 'Nunito', system-ui, sans-serif;
+  line-height: 1.2;
+  font-weight: 800;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; border: none; font-family: inherit; }
+
+/* ── Utility ── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 80px 0; }
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--text);
+  margin-bottom: 40px;
+  text-align: center;
+}
+.section-title span { color: var(--primary); }
+.badge {
+  display: inline-block;
+  padding: 5px 13px;
+  border-radius: 20px;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.badge-primary { background: var(--primary); color: #fff; }
+.badge-outline { border: 1px solid var(--border); color: var(--text-muted); }
+.badge-gold { background: rgba(240,176,64,.15); border: 1px solid rgba(240,176,64,.4); color: var(--gold); }
+.stars { color: var(--star); letter-spacing: 2px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: .95rem;
+  transition: transform .2s, box-shadow .2s;
+  font-family: 'Nunito', sans-serif;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), #ff6b8a);
+  color: #fff;
+  box-shadow: 0 4px 24px var(--primary-glow);
+}
+.btn-primary:hover { box-shadow: 0 8px 32px var(--primary-glow); }
+.btn-gold {
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid rgba(240,176,64,.5);
+}
+.btn-gold:hover { background: rgba(240,176,64,.08); border-color: var(--gold); }
+
+/* ── NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(21,13,42,.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: 16px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.nav-logo-img {
+  height: 40px;
+  width: 72px;
+  object-fit: cover;
+  object-position: left center;
+  border-radius: 8px;
+}
+.nav-logo-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--primary);
+  text-shadow: 0 0 16px var(--primary-glow);
+  white-space: nowrap;
+  letter-spacing: -.01em;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+}
+.nav-links a {
+  padding: 7px 13px;
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: 8px;
+  transition: color .2s, background .2s;
+  white-space: nowrap;
+}
+.nav-links a:hover { color: var(--text); background: rgba(255,255,255,.05); }
+.nav-play {
+  background: linear-gradient(135deg, var(--primary), #ff6b8a) !important;
+  color: #fff !important;
+  padding: 8px 20px !important;
+  border-radius: 24px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 12px var(--primary-glow);
+  transition: box-shadow .2s !important;
+}
+.nav-play:hover { box-shadow: 0 4px 20px var(--primary-glow) !important; }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  padding: 6px;
+  border-radius: 6px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform .3s, opacity .3s;
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+  padding: 12px 20px 16px;
+  gap: 4px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  padding: 10px 12px;
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: 8px;
+  transition: background .2s, color .2s;
+}
+.mobile-menu a:hover { background: rgba(255,255,255,.05); color: var(--text); }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  min-height: 620px;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://img.itch.zone/aW1nLzI2NjYxMzQ3LnBuZw==/original/69KrCn.png');
+  background-size: cover;
+  background-position: center 20%;
+  filter: brightness(.38) saturate(1.1);
+}
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(13,8,32,.92) 0%, rgba(13,8,32,.7) 50%, rgba(13,8,32,.15) 100%),
+    linear-gradient(to top, rgba(13,8,32,.8) 0%, transparent 60%);
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  padding: 80px 0 72px;
+}
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 900;
+  margin-bottom: 16px;
+  line-height: 1.08;
+  letter-spacing: -.02em;
+}
+/* 游戏 Logo 图作为 H1 内嵌标题图 */
+.hero-title-img {
+  display: block;
+  max-height: 110px;
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 4px 20px var(--primary-glow));
+}
+.hero h1 .highlight { color: var(--primary); }
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  max-width: 480px;
+  line-height: 1.75;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
+.hero-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .9rem;
+  color: var(--text-muted);
+}
+.hero-rating .stars { font-size: 1rem; }
+.hero-rating strong { color: var(--text); }
+
+/* YouTube thumbnail */
+.yt-thumb {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+  box-shadow: 0 24px 64px rgba(0,0,0,.6), 0 0 0 1px var(--border);
+  display: block;
+}
+.yt-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+.yt-thumb:hover img { transform: scale(1.04); }
+.yt-play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.25);
+  transition: background .2s;
+}
+.yt-thumb:hover .yt-play-btn { background: rgba(0,0,0,.08); }
+.yt-play-circle {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, var(--primary), #ff6b8a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 28px var(--primary-glow);
+  transition: transform .2s, box-shadow .2s;
+}
+.yt-thumb:hover .yt-play-circle { transform: scale(1.1); box-shadow: 0 8px 40px var(--primary-glow); }
+.yt-play-circle svg { fill: #fff; margin-left: 5px; }
+.yt-bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 32px 16px 14px;
+  background: linear-gradient(transparent, rgba(0,0,0,.78));
+  font-size: .85rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ── SCORE BAR ── */
+.score-bar {
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 36px 0;
+}
+.score-inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.score-big { text-align: center; flex-shrink: 0; }
+.score-big .num {
+  font-family: 'Nunito', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+}
+.score-big .stars { font-size: 1.3rem; margin: 6px 0 4px; }
+.score-big .label { font-size: .78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .1em; }
+.score-bars { flex: 1; min-width: 260px; display: flex; flex-direction: column; gap: 9px; }
+.score-row { display: flex; align-items: center; gap: 10px; font-size: .85rem; }
+.score-label { width: 24px; color: var(--text-muted); text-align: right; flex-shrink: 0; }
+.score-track {
+  flex: 1;
+  height: 8px;
+  background: var(--bg3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.score-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), #ff6b8a);
+  border-radius: 4px;
+}
+.score-pct { width: 36px; color: var(--text-muted); font-size: .8rem; }
+.score-stats { display: flex; flex-direction: column; gap: 14px; flex-shrink: 0; }
+.score-stat { text-align: center; }
+.score-stat .stat-num {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--text);
+}
+.score-stat .stat-lbl { font-size: .75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em; }
+
+/* ── IFRAME SECTION ── */
+.game-section { background: var(--dark2); padding: 64px 0; }
+.game-cover {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.game-cover-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: brightness(.3) saturate(1.2);
+}
+.game-cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(240,80,122,.2) 0%, rgba(13,8,32,.6) 70%);
+}
+.game-cover-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.game-cover-logo-img {
+  height: 80px;
+  width: auto;
+  filter: drop-shadow(0 4px 24px var(--primary-glow)) brightness(1.1);
+}
+.game-cover-stars { font-size: 1.2rem; color: var(--star); }
+.game-cover-sub { color: var(--text-muted); font-size: .9rem; }
+.game-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: none;
+}
+.game-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  display: block;
+}
+.game-footer {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.game-footer-note { font-size: .82rem; color: var(--text-muted); }
+.game-close-btn {
+  background: var(--bg3);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: .82rem;
+  font-weight: 600;
+  transition: color .2s, border-color .2s;
+}
+.game-close-btn:hover { color: var(--text); border-color: var(--primary); }
+
+/* ── ABOUT + COMMENTS ── */
+.about-comments { background: var(--bg); }
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+}
+.col-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+.about-text { color: var(--text-muted); line-height: 1.85; margin-bottom: 22px; }
+.char-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.char-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color .25s, transform .25s;
+}
+.char-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+.char-portrait {
+  width: 100%;
+  aspect-ratio: 347/260;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.char-portrait-placeholder {
+  width: 100%;
+  aspect-ratio: 347/260;
+  background: var(--bg3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+}
+.char-info { padding: 13px 14px 15px; }
+.char-name {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+.char-role { font-size: .75rem; color: var(--primary); text-transform: uppercase; letter-spacing: .06em; font-weight: 700; margin-bottom: 6px; }
+.char-desc { font-size: .8rem; color: var(--text-muted); line-height: 1.55; }
+.warning-list { list-style: none; }
+.warning-list li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: .855rem;
+  color: var(--text-muted);
+}
+.warning-list li:last-child { border-bottom: none; }
+.warning-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--primary); flex-shrink: 0; }
+.warning-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+/* Comments */
+.comment-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 22px; }
+.comment-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.comment-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.comment-author { font-weight: 700; font-size: .9rem; color: var(--text); }
+.comment-stars { font-size: .85rem; color: var(--star); }
+.comment-text { font-size: .855rem; color: var(--text-muted); line-height: 1.65; }
+.comment-date { font-size: .75rem; color: var(--text-dim); margin-top: 6px; }
+.comment-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.comment-form h4 { font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 800; margin-bottom: 14px; color: var(--text); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: .8rem; color: var(--text-muted); font-weight: 600; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: .875rem;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color .2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--primary); }
+.form-group textarea { resize: vertical; min-height: 82px; }
+.form-submit {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary), #ff6b8a);
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: .9rem;
+  margin-top: 4px;
+  transition: box-shadow .2s;
+  font-family: 'Nunito', sans-serif;
+}
+.form-submit:hover { box-shadow: 0 4px 20px var(--primary-glow); }
+
+/* ── FEATURES ── */
+.features { background: var(--bg2); }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.feature-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px 22px;
+  text-align: center;
+  transition: border-color .25s, transform .25s;
+}
+.feature-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+.feature-icon { font-size: 2.4rem; margin-bottom: 14px; }
+.feature-title { font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 10px; }
+.feature-desc { font-size: .845rem; color: var(--text-muted); line-height: 1.65; }
+
+/* ── HOW TO PLAY ── */
+.howtoplay { background: var(--bg); }
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 48px;
+}
+.step-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 20px;
+}
+.step-num {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--primary);
+  opacity: .25;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.step-title { font-family: 'Nunito', sans-serif; font-size: .95rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.step-desc { font-size: .835rem; color: var(--text-muted); line-height: 1.65; }
+.controls-table { width: 100%; border-collapse: collapse; border-radius: var(--radius); overflow: hidden; }
+.controls-table th {
+  background: var(--card2);
+  padding: 13px 16px;
+  text-align: left;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--text-muted);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+.controls-table td {
+  padding: 11px 16px;
+  font-size: .875rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+.controls-table tr:hover td { background: var(--primary-soft); }
+.key-badge {
+  display: inline-block;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-size: .78rem;
+  font-family: monospace;
+  color: var(--text);
+}
+
+/* ── WHY PLAYERS LOVE ── */
+.why-love { background: var(--bg2); }
+.love-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.love-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 34px 26px;
+  text-align: center;
+  transition: border-color .25s, transform .25s;
+}
+.love-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+.love-icon { font-size: 2.8rem; margin-bottom: 14px; }
+.love-stars { margin-bottom: 12px; font-size: 1.1rem; color: var(--star); }
+.love-tag {
+  display: inline-block;
+  background: var(--primary-soft);
+  color: var(--primary);
+  border: 1px solid rgba(240,80,122,.3);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 14px;
+}
+.love-title { font-family: 'Nunito', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--text); margin-bottom: 10px; }
+.love-desc { font-size: .875rem; color: var(--text-muted); line-height: 1.75; }
+
+/* ── QUICK FACTS + LINKS ── */
+.facts-links { background: var(--bg); }
+.facts-links-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+}
+.facts-table { width: 100%; border-collapse: collapse; }
+.facts-table tr { border-bottom: 1px solid var(--border); }
+.facts-table tr:last-child { border-bottom: none; }
+.facts-table td { padding: 11px 0; font-size: .875rem; vertical-align: top; }
+.facts-table td:first-child { color: var(--text-muted); width: 38%; font-weight: 600; }
+.facts-table td:last-child { color: var(--text); }
+.platform-badge {
+  display: inline-block;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 2px 9px;
+  font-size: .75rem;
+  margin: 2px 2px 2px 0;
+}
+.links-grid { display: flex; flex-direction: column; gap: 11px; }
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  transition: border-color .2s, transform .2s;
+}
+.link-card:hover { border-color: var(--primary); transform: translateX(4px); }
+.link-icon { font-size: 1.4rem; flex-shrink: 0; }
+.link-info { flex: 1; min-width: 0; }
+.link-name { font-weight: 700; font-size: .9rem; color: var(--text); }
+.link-desc { font-size: .78rem; color: var(--text-muted); }
+.link-arrow { color: var(--text-dim); font-size: .85rem; flex-shrink: 0; }
+.roadmap {
+  margin-top: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.roadmap-title { font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 14px; }
+.roadmap-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.roadmap-item { display: flex; align-items: center; gap: 10px; font-size: .875rem; color: var(--text-muted); }
+.roadmap-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.dot-done { background: #4caf50; }
+.dot-wip { background: var(--primary); }
+.dot-planned { background: var(--border); border: 1px solid var(--text-dim); }
+
+/* ── FAQ ── */
+.faq { background: var(--bg2); }
+.faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 8px; }
+.faq-item { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.faq-q {
+  width: 100%;
+  background: none;
+  color: var(--text);
+  text-align: left;
+  padding: 19px 20px;
+  font-size: .95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: color .2s;
+  font-family: 'Nunito', sans-serif;
+}
+.faq-q:hover { color: var(--primary); }
+.faq-icon {
+  flex-shrink: 0;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .85rem;
+  transition: transform .3s, background .2s;
+  color: var(--text-muted);
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); background: var(--primary); border-color: var(--primary); color: #fff; }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+.faq-item.open .faq-a { max-height: 400px; }
+.faq-a-inner {
+  padding: 0 20px 18px;
+  font-size: .875rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+  padding: 60px 0 32px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+.footer-brand-logo {
+  height: 44px;
+  width: auto;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 2px 12px var(--primary-glow));
+}
+.footer-about { font-size: .855rem; color: var(--text-muted); line-height: 1.75; max-width: 340px; }
+.footer-col-title { font-family: 'Nunito', sans-serif; font-size: .85rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); margin-bottom: 14px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { font-size: .875rem; color: var(--text-muted); font-weight: 500; transition: color .2s; }
+.footer-links a:hover { color: var(--primary); }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.tag {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 13px;
+  font-size: .75rem;
+  color: var(--text-muted);
+  transition: border-color .2s, color .2s;
+}
+.tag:hover { border-color: var(--primary); color: var(--primary); cursor: default; }
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  text-align: center;
+  font-size: .8rem;
+  color: var(--text-dim);
+  line-height: 1.85;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-top > *:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+  .hero-thumb-wrap { order: -1; }
+  .two-col { grid-template-columns: 1fr; gap: 40px; }
+  .char-cards { grid-template-columns: 1fr 1fr; }
+  .love-grid { grid-template-columns: 1fr; }
+  .facts-links-inner { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .score-inner { gap: 28px; }
+  .hero-inner { padding: 60px 0 56px; }
+}
+@media (max-width: 540px) {
+  .features-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; }
+  .char-cards { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; }
+  .btn { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════ NAV ══════════════════════ -->
+<nav id="top-nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">
+      <img class="nav-logo-img"
+           src="https://img.itch.zone/aW1nLzI2NjYxMzQ3LnBuZw==/original/69KrCn.png"
+           alt="Knee Deep! In Love"
+           width="72" height="40"
+           onerror="this.style.display='none'">
+      <span class="nav-logo-text">Knee Deep!</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#play">Play</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#howtoplay">How to Play</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#comments">Comments</a></li>
+      <li><a href="#play" class="nav-play">▶ Play Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#play" onclick="closeMobileMenu()">▶ Play</a>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#features" onclick="closeMobileMenu()">Features</a>
+    <a href="#howtoplay" onclick="closeMobileMenu()">How to Play</a>
+    <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+    <a href="#comments" onclick="closeMobileMenu()">Comments</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-overlay"></div>
+  <div class="container hero-inner">
+    <div class="hero-left">
+      <div class="hero-badges">
+        <span class="badge badge-primary">Visual Novel</span>
+        <span class="badge badge-outline">Yandere</span>
+        <span class="badge badge-gold">Free Demo</span>
+        <span class="badge badge-outline">Horror Romance</span>
+      </div>
+      <!-- 游戏 Logo 图作为标题 -->
+      <img class="hero-title-img"
+           src="https://img.itch.zone/aW1nLzI2NjYxMzQ3LnBuZw==/original/69KrCn.png"
+           alt="Knee Deep! In Love Free Online"
+           width="460" height="110"
+           loading="eager" fetchpriority="high"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <h1 style="display:none"><span class="highlight">Knee Deep! In Love</span> Free Online</h1>
+      <p class="hero-sub">
+        Navigate campus life at Pebblestone University and discover that those closest to you are willing to kill for your affection. A dark romance visual novel blending cozy college life with unsettling psychological horror.
+      </p>
+      <div class="hero-actions">
+        <a href="#play" class="btn btn-primary">▶ Play the Demo Free</a>
+        <a href="https://store.steampowered.com/app/4313560/Knee_Deep_In_Love/" target="_blank" rel="noopener" class="btn btn-gold">Wishlist on Steam ↗</a>
+      </div>
+      <div class="hero-rating">
+        <span class="stars">★★★★★</span>
+        <strong>4.7 / 5</strong>
+        <span>· 931+ ratings on itch.io</span>
+      </div>
+    </div>
+    <div class="hero-thumb-wrap">
+      <a class="yt-thumb" href="https://www.youtube.com/watch?v=nbAYD9H_1Y4" target="_blank" rel="noopener" aria-label="Watch Knee Deep! In Love trailer on YouTube">
+        <img src="https://img.youtube.com/vi/nbAYD9H_1Y4/maxresdefault.jpg"
+             alt="Knee Deep! In Love – Official Trailer"
+             width="1280" height="720"
+             loading="eager" fetchpriority="high">
+        <div class="yt-play-btn">
+          <div class="yt-play-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="yt-bar">▶ Knee Deep! In Love — Official Trailer</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ SCORE BAR ══════════════════════ -->
+<div class="score-bar">
+  <div class="container score-inner">
+    <div class="score-big">
+      <div class="num">4.7</div>
+      <div class="stars">★★★★★</div>
+      <div class="label">Player Score</div>
+    </div>
+    <div class="score-bars">
+      <div class="score-row">
+        <span class="score-label">5★</span>
+        <div class="score-track"><div class="score-fill" style="width:78%"></div></div>
+        <span class="score-pct">78%</span>
+      </div>
+      <div class="score-row">
+        <span class="score-label">4★</span>
+        <div class="score-track"><div class="score-fill" style="width:14%"></div></div>
+        <span class="score-pct">14%</span>
+      </div>
+      <div class="score-row">
+        <span class="score-label">3★</span>
+        <div class="score-track"><div class="score-fill" style="width:5%;background:var(--text-dim)"></div></div>
+        <span class="score-pct">5%</span>
+      </div>
+      <div class="score-row">
+        <span class="score-label">2★</span>
+        <div class="score-track"><div class="score-fill" style="width:2%;background:var(--text-dim)"></div></div>
+        <span class="score-pct">2%</span>
+      </div>
+      <div class="score-row">
+        <span class="score-label">1★</span>
+        <div class="score-track"><div class="score-fill" style="width:1%;background:var(--text-dim)"></div></div>
+        <span class="score-pct">1%</span>
+      </div>
+    </div>
+    <div class="score-stats">
+      <div class="score-stat">
+        <div class="stat-num">10K+</div>
+        <div class="stat-lbl">Players</div>
+      </div>
+      <div class="score-stat">
+        <div class="stat-num">931+</div>
+        <div class="stat-lbl">Ratings</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ GAME IFRAME ══════════════════════ -->
+<section class="game-section" id="play">
+  <div class="container">
+    <h2 class="section-title">Play <span>Knee Deep! In Love</span> Free Online</h2>
+
+    <!-- Cover card (default) -->
+    <div class="game-cover" id="game-cover" onclick="loadGame()" role="button" tabindex="0" aria-label="Click to play Knee Deep! In Love">
+      <img class="game-cover-bg-img"
+           src="https://img.itch.zone/aW1nLzI2NjYxMzQ3LnBuZw==/original/69KrCn.png"
+           alt="" aria-hidden="true" width="900" height="506" loading="lazy">
+      <div class="game-cover-overlay"></div>
+      <div class="game-cover-content">
+        <img class="game-cover-logo-img"
+             src="https://img.itch.zone/aW1nLzI2NjYxMzQ3LnBuZw==/original/69KrCn.png"
+             alt="Knee Deep! In Love" width="280" height="80" loading="lazy"
+             onerror="this.style.display='none'">
+        <div class="game-cover-stars">★★★★★</div>
+        <div class="game-cover-sub">Free Online Demo · Click to Play</div>
+        <button class="btn btn-primary" style="margin-top:6px" onclick="loadGame();event.stopPropagation()">
+          ▶ Play Now
+        </button>
+      </div>
+    </div>
+
+    <!-- iframe (lazy) -->
+    <div class="game-wrapper" id="game-wrapper">
+      <iframe
+        id="game-frame"
+        src=""
+        allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share"
+        allowfullscreen
+        title="Knee Deep! In Love – Play Free Online"
+        width="900" height="506">
+      </iframe>
+      <div class="game-footer">
+        <span class="game-footer-note">⏳ This game may load slowly. Please wait a moment.</span>
+        <button class="game-close-btn" onclick="closeGame()">✕ Close Game</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ ABOUT + COMMENTS ══════════════════════ -->
+<section class="section about-comments" id="about">
+  <div class="container">
+    <div class="two-col">
+
+      <!-- About -->
+      <div>
+        <h2 class="col-title">About Knee Deep! In Love</h2>
+        <p class="about-text">
+          Welcome to Pebblestone University — where campus life seems perfectly ordinary until you notice the obsessive glances, the suspicious social media posts, and the way certain people always seem to know where you are. <strong>Knee Deep! In Love</strong> is a yandere visual novel with a cozy college aesthetic hiding genuine psychological horror.
+        </p>
+        <p class="about-text">
+          Choose your pronouns, shape your story, and decide which of three love interests is a true sweetheart — and which would commit unspeakable acts for your affection. 25,000+ words, 6 CGs, and 2 distinct endings in the demo.
+        </p>
+
+        <h3 style="font-family:'Nunito',sans-serif;font-size:.95rem;font-weight:800;margin-bottom:14px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;">Meet the Cast</h3>
+        <div class="char-cards">
+          <!-- Milo -->
+          <div class="char-card">
+            <img class="char-portrait"
+                 src="https://img.itch.zone/aW1hZ2UvMzM2NzM4OS8yNjY2MTAzNi5wbmc=/347x500/jkX66R.png"
+                 alt="Milo – Childhood Best Friend"
+                 width="347" height="260"
+                 loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="char-portrait-placeholder" style="display:none">📚</div>
+            <div class="char-info">
+              <div class="char-name">Milo</div>
+              <div class="char-role">Childhood Best Friend</div>
+              <div class="char-desc">Always there for you — perhaps a little too aware of your every move.</div>
+            </div>
+          </div>
+          <!-- Anthony -->
+          <div class="char-card">
+            <img class="char-portrait"
+                 src="https://img.itch.zone/aW1hZ2UvMzM2NzM4OS8yNjY2MTAzOC5wbmc=/347x500/PFdvJ9.png"
+                 alt="Anthony – Assassin Roommate"
+                 width="347" height="260"
+                 loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="char-portrait-placeholder" style="display:none">🔪</div>
+            <div class="char-info">
+              <div class="char-name">Anthony</div>
+              <div class="char-role">Assassin Roommate</div>
+              <div class="char-desc">A suspiciously calm demeanor and a skill set far beyond academia.</div>
+            </div>
+          </div>
+          <!-- Rylee -->
+          <div class="char-card">
+            <img class="char-portrait"
+                 src="https://img.itch.zone/aW1hZ2UvMzM2NzM4OS8yNjY2MTExMC5wbmc=/347x500/fEQxR%2F.png"
+                 alt="Rylee – Artist Classmate"
+                 width="347" height="260"
+                 loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="char-portrait-placeholder" style="display:none">🎨</div>
+            <div class="char-info">
+              <div class="char-name">Rylee</div>
+              <div class="char-role">Artist Classmate</div>
+              <div class="char-desc">Creative, passionate, and fiercely protective — beauty and darkness in equal measure.</div>
+            </div>
+          </div>
+          <!-- Cal -->
+          <div class="char-card">
+            <div class="char-portrait-placeholder" style="display:flex">⭐</div>
+            <div class="char-info">
+              <div class="char-name">Cal</div>
+              <div class="char-role">Stretch Goal Character</div>
+              <div class="char-desc">A fan-favorite unlocked via Kickstarter — mysterious, still to be revealed.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="warning-title">⚠ Content Warnings</div>
+        <ul class="warning-list">
+          <li><span class="warning-dot"></span>Graphic violence &amp; blood</li>
+          <li><span class="warning-dot"></span>Psychological horror &amp; manipulation</li>
+          <li><span class="warning-dot"></span>Stalking &amp; obsessive behavior</li>
+          <li><span class="warning-dot"></span>Murder, kidnapping &amp; drugging</li>
+          <li><span class="warning-dot"></span>Gaslighting &amp; emotional abuse</li>
+          <li><span class="warning-dot"></span>Animal cruelty (referenced)</li>
+          <li><span class="warning-dot"></span>Suicide themes</li>
+          <li><span class="warning-dot"></span>No sexually explicit content</li>
+        </ul>
+      </div>
+
+      <!-- Comments -->
+      <div id="comments">
+        <h2 class="col-title">Player Comments</h2>
+        <div class="comment-list" id="comment-list">
+          <div class="comment-card">
+            <div class="comment-header">
+              <span class="comment-author">yandere_luvr99</span>
+              <span class="comment-stars">★★★★★</span>
+            </div>
+            <p class="comment-text">I went in expecting a cute little otome and ended up shaking by the second Anthony route. The writing is SO good. The contrast between how sweet he seems at first and what he actually does... chef's kiss 🔪</p>
+            <div class="comment-date">May 2025</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-header">
+              <span class="comment-author">softhorrorfan</span>
+              <span class="comment-stars">★★★★★</span>
+            </div>
+            <p class="comment-text">The art style is adorable which makes the horror moments hit even harder. Milo's route absolutely destroyed me emotionally. Comfort Kuma Studios really nailed the tonal balance here.</p>
+            <div class="comment-date">April 2025</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-header">
+              <span class="comment-author">visualnovelcritic</span>
+              <span class="comment-stars">★★★★☆</span>
+            </div>
+            <p class="comment-text">Solid demo! Voice acting adds a lot even in partial form. I appreciated the pronoun options — more VNs need that. Looking forward to the full release in 2027. Kickstarter backed!</p>
+            <div class="comment-date">April 2026</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-header">
+              <span class="comment-author">ryleeenthusiast</span>
+              <span class="comment-stars">★★★★★</span>
+            </div>
+            <p class="comment-text">Rylee is everything. The art on their CGs is stunning. I replayed the demo three times just for them. Cannot wait for the full harem route stretch goal content!!</p>
+            <div class="comment-date">March 2026</div>
+          </div>
+          <div class="comment-card">
+            <div class="comment-header">
+              <span class="comment-author">darknoveladdict</span>
+              <span class="comment-stars">★★★★★</span>
+            </div>
+            <p class="comment-text">One of the best free VN demos I've played. The social media investigation mechanic is genuinely unsettling. You start piecing things together before the protagonist does and that dramatic irony is brilliant.</p>
+            <div class="comment-date">February 2026</div>
+          </div>
+        </div>
+        <div class="comment-form">
+          <h4>Leave a Comment</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-name">Name</label>
+              <input type="text" id="c-name" placeholder="Your name" maxlength="40">
+            </div>
+            <div class="form-group">
+              <label for="c-rating">Rating</label>
+              <select id="c-rating">
+                <option value="5">★★★★★ (5)</option>
+                <option value="4">★★★★☆ (4)</option>
+                <option value="3">★★★☆☆ (3)</option>
+                <option value="2">★★☆☆☆ (2)</option>
+                <option value="1">★☆☆☆☆ (1)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:12px">
+            <label for="c-text">Your comment</label>
+            <textarea id="c-text" placeholder="Share your thoughts about the game..." maxlength="500"></textarea>
+          </div>
+          <button class="form-submit" onclick="submitComment()">Post Comment</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FEATURES ══════════════════════ -->
+<section class="section features" id="features">
+  <div class="container">
+    <h2 class="section-title">Core <span>Features</span></h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎭</div>
+        <div class="feature-title">Dark Romance Narrative</div>
+        <div class="feature-desc">25,000+ words of story-rich content blending cozy college romance with unsettling psychological horror and genuine dramatic tension.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <div class="feature-title">Play Free in Browser</div>
+        <div class="feature-desc">No download required for the demo. Jump straight in on any desktop browser, or download builds for Windows, Mac, Linux, and Android.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔀</div>
+        <div class="feature-title">Meaningful Choices</div>
+        <div class="feature-desc">Every decision shapes your relationships. Two distinct endings in the demo hint at the branching depth of the full game, including a harem route.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎙️</div>
+        <div class="feature-title">Voice Acting &amp; Art</div>
+        <div class="feature-desc">Partial voice acting and 6 hand-crafted CGs bring the characters to life. Full English voice acting is a funded Kickstarter milestone.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ HOW TO PLAY ══════════════════════ -->
+<section class="section howtoplay" id="howtoplay">
+  <div class="container">
+    <h2 class="section-title">How to <span>Play</span></h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-title">Click Play Now</div>
+        <div class="step-desc">Hit the Play Now button above to launch the game in your browser. No install, no account — just click and start.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-title">Customize Your Protagonist</div>
+        <div class="step-desc">Set your name and preferred pronouns (she/her, he/him, they/them) to make the story your own from the very first scene.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-title">Make Choices &amp; Investigate</div>
+        <div class="step-desc">Click through dialogue, make relationship decisions, and investigate suspicious social media posts to uncover hidden truths.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-title">Find All Endings</div>
+        <div class="step-desc">The demo has 2 endings. Replay with different choices to unlock both, and watch for subtle foreshadowing throughout.</div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Nunito',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:18px;text-align:center;">Controls</h3>
+    <div style="overflow-x:auto;">
+      <table class="controls-table">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Mouse</th>
+            <th>Keyboard</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Advance dialogue</td><td>Left click</td><td><span class="key-badge">Space</span> / <span class="key-badge">Enter</span></td></tr>
+          <tr><td>Skip text</td><td>Hold left click</td><td><span class="key-badge">Ctrl</span></td></tr>
+          <tr><td>Make a choice</td><td>Click choice button</td><td><span class="key-badge">↑</span><span class="key-badge">↓</span> + <span class="key-badge">Enter</span></td></tr>
+          <tr><td>Open menu / Save</td><td>Right click</td><td><span class="key-badge">Esc</span></td></tr>
+          <tr><td>Hide UI</td><td>Middle click</td><td><span class="key-badge">H</span></td></tr>
+          <tr><td>Auto play</td><td>Auto button</td><td><span class="key-badge">A</span></td></tr>
+          <tr><td>Fullscreen</td><td>Fullscreen icon</td><td><span class="key-badge">F</span> / <span class="key-badge">F11</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ WHY PLAYERS LOVE ══════════════════════ -->
+<section class="section why-love">
+  <div class="container">
+    <h2 class="section-title">Why Players Love <span>Knee Deep!</span></h2>
+    <div class="love-grid">
+      <div class="love-card">
+        <div class="love-icon">✍️</div>
+        <div class="love-stars">★★★★★</div>
+        <div class="love-tag">Writing</div>
+        <div class="love-title">Masterful Tonal Balance</div>
+        <div class="love-desc">Players consistently praise the writing for seamlessly blending sweet, cozy romance with genuinely unsettling horror — the dark moments hit far harder because of the warmth that precedes them.</div>
+      </div>
+      <div class="love-card">
+        <div class="love-icon">🎨</div>
+        <div class="love-stars">★★★★★</div>
+        <div class="love-tag">Art &amp; Style</div>
+        <div class="love-title">Stunning Visual Design</div>
+        <div class="love-desc">The cute expressive character art and CGs create an intentional contrast with dark themes. Every illustration carries emotional weight in this polished and deeply memorable visual style.</div>
+      </div>
+      <div class="love-card">
+        <div class="love-icon">❤️</div>
+        <div class="love-stars">★★★★★</div>
+        <div class="love-tag">Characters</div>
+        <div class="love-title">Deeply Compelling Cast</div>
+        <div class="love-desc">Milo, Anthony, and Rylee each have distinct personalities that make players genuinely invested — and genuinely unsettled. Multiple playthroughs reveal new layers every time.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ QUICK FACTS + LINKS ══════════════════════ -->
+<section class="section facts-links">
+  <div class="container">
+    <h2 class="section-title">Game <span>Info</span> &amp; Official Links</h2>
+    <div class="facts-links-inner">
+      <div>
+        <h3 style="font-family:'Nunito',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:18px;">Quick Facts</h3>
+        <table class="facts-table">
+          <tr><td>Genre</td><td>Visual Novel, Dating Sim, Yandere, Horror Romance</td></tr>
+          <tr><td>Developer</td><td>Comfort Kuma Studios</td></tr>
+          <tr><td>Engine</td><td>Ren'Py</td></tr>
+          <tr><td>Status</td><td><span class="badge badge-primary">In Development</span></td></tr>
+          <tr><td>Current Build</td><td>Demo (Full release 2027)</td></tr>
+          <tr><td>Demo Length</td><td>~2–3 hours · 25,000+ words</td></tr>
+          <tr><td>Full Game</td><td>8–10 hours estimated</td></tr>
+          <tr><td>Languages</td><td>English · Simplified Chinese · Spanish (LATAM)</td></tr>
+          <tr><td>Platforms</td><td>
+            <span class="platform-badge">Browser</span>
+            <span class="platform-badge">Windows</span>
+            <span class="platform-badge">macOS</span>
+            <span class="platform-badge">Linux</span>
+            <span class="platform-badge">Android</span>
+          </td></tr>
+          <tr><td>Price</td><td>Free demo · Full game ~$15</td></tr>
+          <tr><td>Age Rating</td><td>Mature 16+</td></tr>
+          <tr><td>AI Policy</td><td>No generative AI used</td></tr>
+          <tr><td>Rating</td><td>⭐ 4.7 / 5 (931+ ratings)</td></tr>
+        </table>
+
+        <div class="roadmap">
+          <div class="roadmap-title">🗺 Roadmap</div>
+          <ul class="roadmap-list">
+            <li class="roadmap-item"><span class="roadmap-dot dot-done"></span>Demo released (3 routes, 2 endings)</li>
+            <li class="roadmap-item"><span class="roadmap-dot dot-done"></span>Android build released</li>
+            <li class="roadmap-item"><span class="roadmap-dot dot-done"></span>Kickstarter funded (28 hrs)</li>
+            <li class="roadmap-item"><span class="roadmap-dot dot-wip"></span>Full English voice acting (in progress)</li>
+            <li class="roadmap-item"><span class="roadmap-dot dot-wip"></span>Simplified Chinese &amp; Spanish LATAM translation</li>
+            <li class="roadmap-item"><span class="roadmap-dot dot-planned"></span>Harem route (stretch goal unlocked)</li>
+            <li class="roadmap-item"><span class="roadmap-dot dot-planned"></span>Cal — new character (stretch goal)</li>
+            <li class="roadmap-item"><span class="roadmap-dot dot-planned"></span>Steam release (full game, 2027)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-family:'Nunito',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:18px;">Official Links</h3>
+        <div class="links-grid">
+          <a class="link-card" href="https://comfortkuma.itch.io/knee-deep" target="_blank" rel="noopener">
+            <span class="link-icon">🎮</span>
+            <div class="link-info">
+              <div class="link-name">itch.io — Play &amp; Download</div>
+              <div class="link-desc">Official demo page by Comfort Kuma Studios</div>
+            </div>
+            <span class="link-arrow">↗</span>
+          </a>
+          <a class="link-card" href="https://store.steampowered.com/app/4313560/Knee_Deep_In_Love/" target="_blank" rel="noopener">
+            <span class="link-icon">🖥️</span>
+            <div class="link-info">
+              <div class="link-name">Steam — Wishlist Now</div>
+              <div class="link-desc">Wishlist the full game on Steam</div>
+            </div>
+            <span class="link-arrow">↗</span>
+          </a>
+          <a class="link-card" href="https://www.kickstarter.com/projects/seraphimstudios/knee-deep-in-love-a-yandere-otome-visual-novel" target="_blank" rel="noopener">
+            <span class="link-icon">🚀</span>
+            <div class="link-info">
+              <div class="link-name">Kickstarter Campaign</div>
+              <div class="link-desc">Support the full game development</div>
+            </div>
+            <span class="link-arrow">↗</span>
+          </a>
+          <a class="link-card" href="https://discord.com/invite/CUMZpxSzMt" target="_blank" rel="noopener">
+            <span class="link-icon">💬</span>
+            <div class="link-info">
+              <div class="link-name">Discord Community</div>
+              <div class="link-desc">Join fans and the dev team</div>
+            </div>
+            <span class="link-arrow">↗</span>
+          </a>
+          <a class="link-card" href="https://x.com/HeartstopTour" target="_blank" rel="noopener">
+            <span class="link-icon">🐦</span>
+            <div class="link-info">
+              <div class="link-name">Twitter / X</div>
+              <div class="link-desc">Dev updates and announcements</div>
+            </div>
+            <span class="link-arrow">↗</span>
+          </a>
+          <a class="link-card" href="https://www.tiktok.com/@comfortkumastudios" target="_blank" rel="noopener">
+            <span class="link-icon">🎵</span>
+            <div class="link-info">
+              <div class="link-name">TikTok</div>
+              <div class="link-desc">Behind-the-scenes and game clips</div>
+            </div>
+            <span class="link-arrow">↗</span>
+          </a>
+          <a class="link-card" href="https://comfortkumastudio.tumblr.com/" target="_blank" rel="noopener">
+            <span class="link-icon">📝</span>
+            <div class="link-info">
+              <div class="link-name">Tumblr Devlog</div>
+              <div class="link-desc">Art, dev updates, community posts</div>
+            </div>
+            <span class="link-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FAQ ══════════════════════ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+    <div class="faq-list" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Is Knee Deep! In Love free to play? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes! The demo is completely free to play in your browser right here, or download it from itch.io. The full game will be a paid release (~$15) on Steam and itch.io, with a planned 2027 release date.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I play on mobile? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes! An Android build is available for download on itch.io. The browser version may work on mobile but is best experienced on desktop for optimal performance and text readability.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is a yandere visual novel? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">A yandere is a character archetype — typically sweet and loving on the surface but harboring a dangerous obsessive side. Knee Deep! In Love uses this trope to craft a dark romance story where the line between love and obsession is deliberately blurred.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How long is the demo? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">The demo contains 25,000+ words across 3 character routes with 2 distinct endings. A single playthrough takes 1–2 hours; seeing everything takes around 3–4 hours. The full game is estimated at 8–10 hours total.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Does the game have content warnings? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Knee Deep! In Love contains graphic violence, psychological horror, stalking, murder, kidnapping, drugging, gaslighting, animal cruelty (referenced), blood, and suicide themes. There is no sexually explicit content. Please play responsibly.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What languages are supported? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">The current demo is in English only. Simplified Chinese and Spanish (Latin America) translations are planned for the full release, both of which were Kickstarter funding milestones.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">The game loads slowly — is something wrong? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Not at all. The game is a full Ren'Py visual novel running in a browser, so initial load takes 30–60 seconds depending on your connection speed. Once loaded it runs smoothly. If it stays blank after 2 minutes, try a hard refresh (Ctrl+Shift+R).</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I save my progress? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes! Right-click (or press Esc) to open the menu and use the Save function. Browser saves persist in local storage. For reliable saves across sessions, consider downloading the desktop build from itch.io.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I view it fullscreen? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Click the fullscreen icon in the game's bottom right corner, or press F / F11 on your keyboard. For the best experience, we recommend fullscreen mode on a desktop or laptop display.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is this an official fan site or the official game site? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">This is a fan-made landing page created to help players discover and play Knee Deep! In Love. All game content, art, and trademarks belong to Comfort Kuma Studios / Seraphim Studios. Visit the official page at comfortkuma.itch.io/knee-deep.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <img class="footer-brand-logo"
+             src="https://img.itch.zone/aW1nLzI2NjYxMzQ3LnBuZw==/original/69KrCn.png"
+             alt="Knee Deep! In Love"
+             width="160" height="44"
+             loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div style="display:none;font-family:'Nunito',sans-serif;font-size:1.2rem;font-weight:900;color:var(--primary);margin-bottom:12px;">🔪 Knee Deep! In Love</div>
+        <p class="footer-about">
+          An unofficial fan landing page dedicated to helping players discover Knee Deep! In Love — the yandere visual novel by Comfort Kuma Studios. All game content, characters, and artwork are the intellectual property of their respective creators.
+        </p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="#play">Play Free Online</a></li>
+          <li><a href="#about">About the Game</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#howtoplay">How to Play</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#comments">Comments</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Official Links</div>
+        <ul class="footer-links">
+          <li><a href="https://comfortkuma.itch.io/knee-deep" target="_blank" rel="noopener">itch.io</a></li>
+          <li><a href="https://store.steampowered.com/app/4313560/Knee_Deep_In_Love/" target="_blank" rel="noopener">Steam</a></li>
+          <li><a href="https://discord.com/invite/CUMZpxSzMt" target="_blank" rel="noopener">Discord</a></li>
+          <li><a href="https://x.com/HeartstopTour" target="_blank" rel="noopener">Twitter / X</a></li>
+          <li><a href="https://www.kickstarter.com/projects/seraphimstudios/knee-deep-in-love-a-yandere-otome-visual-novel" target="_blank" rel="noopener">Kickstarter</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tag-cloud">
+      <span class="tag">Visual Novel</span>
+      <span class="tag">Yandere</span>
+      <span class="tag">Dating Sim</span>
+      <span class="tag">Horror Romance</span>
+      <span class="tag">Otome</span>
+      <span class="tag">Free Online</span>
+      <span class="tag">Ren'Py</span>
+      <span class="tag">Comfort Kuma</span>
+      <span class="tag">Dark Romance</span>
+      <span class="tag">Psychological Horror</span>
+      <span class="tag">Indie Game</span>
+      <span class="tag">Browser Game</span>
+      <span class="tag">LGBT</span>
+      <span class="tag">Story Rich</span>
+      <span class="tag">Multiple Endings</span>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 knee-deep.live — Fan site. <em>Knee Deep! In Love</em> and all related content are the property of <strong>Comfort Kuma Studios / Seraphim Studios</strong>. This site is not affiliated with or endorsed by the developers.</p>
+      <p style="margin-top:6px">Play free online · No download required · Fan-made with ❤️</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════ JS ══════════════════════ -->
+<script>
+// ── Hamburger ──
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation();
+  mobileMenu.classList.toggle('open');
+});
+document.addEventListener('click', (e) => {
+  if (!mobileMenu.contains(e.target) && e.target !== hamburger) {
+    mobileMenu.classList.remove('open');
+  }
+});
+function closeMobileMenu() { mobileMenu.classList.remove('open'); }
+
+// ── Iframe Lazy Load ──
+const IFRAME_URL = 'https://itch.io/embed-upload/17289707?color=0d0820';
+function loadGame() {
+  const cover = document.getElementById('game-cover');
+  const wrapper = document.getElementById('game-wrapper');
+  const frame = document.getElementById('game-frame');
+  cover.style.display = 'none';
+  wrapper.style.display = 'block';
+  if (!frame.src || frame.src === window.location.href) { frame.src = IFRAME_URL; }
+  wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function closeGame() {
+  document.getElementById('game-cover').style.display = 'flex';
+  document.getElementById('game-wrapper').style.display = 'none';
+}
+document.getElementById('game-cover').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadGame(); }
+});
+
+// ── FAQ Accordion ──
+document.querySelectorAll('.faq-q').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach((el) => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// ── Comment Form ──
+function escapeHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+          .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+}
+function submitComment() {
+  const name = document.getElementById('c-name').value.trim();
+  const rating = parseInt(document.getElementById('c-rating').value);
+  const text = document.getElementById('c-text').value.trim();
+  if (!name || !text) { alert('Please fill in your name and comment.'); return; }
+  const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+  const card = document.createElement('div');
+  card.className = 'comment-card';
+  card.innerHTML =
+    '<div class="comment-header">' +
+      '<span class="comment-author">' + escapeHtml(name) + '</span>' +
+      '<span class="comment-stars">' + stars + '</span>' +
+    '</div>' +
+    '<p class="comment-text">' + escapeHtml(text) + '</p>' +
+    '<div class="comment-date">Just now</div>';
+  const list = document.getElementById('comment-list');
+  list.insertBefore(card, list.firstChild);
+  document.getElementById('c-name').value = '';
+  document.getElementById('c-text').value = '';
+  document.getElementById('c-rating').value = '5';
+}
+</script>
+
+</body>
+</html>
