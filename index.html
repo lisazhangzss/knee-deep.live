@@ -266,7 +266,7 @@ nav {
   position: relative;
   padding: 0;
   overflow: hidden;
-  min-height: 620px;
+  min-height: auto;
 }
 .hero-bg {
   position: absolute;
@@ -280,17 +280,14 @@ nav {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(13,8,32,.92) 0%, rgba(13,8,32,.7) 50%, rgba(13,8,32,.15) 100%),
-    linear-gradient(to top, rgba(13,8,32,.8) 0%, transparent 60%);
+    rgba(13,8,32,.72),
+    linear-gradient(to top, rgba(13,8,32,.9) 0%, transparent 60%);
 }
 .hero-inner {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  align-items: center;
-  padding: 80px 0 72px;
+  padding: 52px 0 44px;
+  max-width: 680px;
 }
 .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
 .hero h1 {
@@ -476,6 +473,7 @@ nav {
   max-width: 900px;
   margin: 0 auto;
   display: none;
+  position: relative;
 }
 .game-wrapper iframe {
   width: 100%;
@@ -508,6 +506,7 @@ nav {
   transition: color .2s, border-color .2s;
 }
 .game-close-btn:hover { color: var(--text); border-color: var(--primary); }
+@keyframes spin { to { transform: rotate(360deg); } }
 
 /* ── ABOUT + COMMENTS ── */
 .about-comments { background: var(--bg); }
@@ -746,8 +745,9 @@ nav {
 .facts-links { background: var(--bg); }
 .facts-links-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 52px;
+  max-width: 680px;
 }
 .facts-table { width: 100%; border-collapse: collapse; }
 .facts-table tr { border-bottom: 1px solid var(--border); }
@@ -847,7 +847,7 @@ footer {
 }
 .footer-top {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 48px;
   margin-bottom: 40px;
 }
@@ -948,6 +948,11 @@ footer {
   </div>
 </nav>
 
+<!-- Mobile Warning -->
+<div id="mobile-warning" style="display:none;background:#f0507a;color:#fff;text-align:center;padding:10px 16px;font-size:.875rem;font-weight:600;">
+  ⚠️ This game works best on desktop. Mobile experience may be limited.
+</div>
+
 <!-- ══════════════════════ HERO ══════════════════════ -->
 <section class="hero" id="hero">
   <div class="hero-bg"></div>
@@ -973,7 +978,6 @@ footer {
       </p>
       <div class="hero-actions">
         <a href="#play" class="btn btn-primary">▶ Play the Demo Free</a>
-        <a href="https://store.steampowered.com/app/4313560/Knee_Deep_In_Love/" target="_blank" rel="noopener" class="btn btn-gold">Wishlist on Steam ↗</a>
       </div>
       <div class="hero-rating">
         <span class="stars">★★★★★</span>
@@ -981,19 +985,54 @@ footer {
         <span>· 931+ ratings on itch.io</span>
       </div>
     </div>
-    <div class="hero-thumb-wrap">
-      <a class="yt-thumb" href="https://www.youtube.com/watch?v=nbAYD9H_1Y4" target="_blank" rel="noopener" aria-label="Watch Knee Deep! In Love trailer on YouTube">
-        <img src="https://img.youtube.com/vi/nbAYD9H_1Y4/maxresdefault.jpg"
-             alt="Knee Deep! In Love – Official Trailer"
-             width="1280" height="720"
-             loading="eager" fetchpriority="high">
-        <div class="yt-play-btn">
-          <div class="yt-play-circle">
-            <svg width="28" height="28" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <div class="yt-bar">▶ Knee Deep! In Love — Official Trailer</div>
-      </a>
+  </div>
+</section>
+
+<!-- ══════════════════════ GAME IFRAME ══════════════════════ -->
+<section class="game-section" id="play">
+  <div class="container">
+    <h2 class="section-title">Play <span>Knee Deep! In Love</span> Free Online</h2>
+
+    <!-- Cover card (default) -->
+    <div class="game-cover" id="game-cover" onclick="loadGame()" role="button" tabindex="0" aria-label="Click to play Knee Deep! In Love">
+      <img class="game-cover-bg-img"
+           src="https://img.itch.zone/aW1nLzI2NjYxMzQ3LnBuZw==/original/69KrCn.png"
+           alt="" aria-hidden="true" width="900" height="506" loading="lazy">
+      <div class="game-cover-overlay"></div>
+      <div class="game-cover-content">
+        <img class="game-cover-logo-img"
+             src="https://img.itch.zone/aW1nLzI2NjYxMzQ3LnBuZw==/original/69KrCn.png"
+             alt="Knee Deep! In Love" width="280" height="80" loading="lazy"
+             onerror="this.style.display='none'">
+        <div class="game-cover-stars">★★★★★</div>
+        <div class="game-cover-sub">Free Online Demo · Click to Play</div>
+        <button class="btn btn-primary" style="margin-top:6px" onclick="loadGame();event.stopPropagation()">
+          ▶ Play Now
+        </button>
+      </div>
+    </div>
+
+    <!-- iframe (lazy) -->
+    <div class="game-wrapper" id="game-wrapper">
+      <!-- Loading banner (shown while game loads, user can dismiss) -->
+      <div id="game-loading-banner" style="display:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10;background:rgba(13,8,32,.92);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 40px;text-align:center;pointer-events:none;backdrop-filter:blur(8px);">
+        <div style="width:44px;height:44px;border:4px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 16px;"></div>
+        <div style="color:var(--text);font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;margin-bottom:8px;">Loading Game…</div>
+        <div style="color:var(--text-muted);font-size:.82rem;line-height:1.6;">First load takes <strong style="color:var(--text)">1–2 minutes</strong>.<br>The game will appear here shortly.</div>
+        <div id="load-timer" style="color:var(--text-dim);font-size:.78rem;margin-top:10px;">0s elapsed</div>
+      </div>
+      <iframe
+        id="game-frame"
+        src=""
+        allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share"
+        allowfullscreen
+        title="Knee Deep! In Love – Play Free Online"
+        width="900" height="506">
+      </iframe>
+      <div class="game-footer">
+        <span class="game-footer-note" id="game-footer-note">⏳ Loading… this may take 1–2 minutes. Please don't close the page.</span>
+        <button class="game-close-btn" onclick="closeGame()">✕ Close Game</button>
+      </div>
     </div>
   </div>
 </section>
@@ -1045,48 +1084,6 @@ footer {
     </div>
   </div>
 </div>
-
-<!-- ══════════════════════ GAME IFRAME ══════════════════════ -->
-<section class="game-section" id="play">
-  <div class="container">
-    <h2 class="section-title">Play <span>Knee Deep! In Love</span> Free Online</h2>
-
-    <!-- Cover card (default) -->
-    <div class="game-cover" id="game-cover" onclick="loadGame()" role="button" tabindex="0" aria-label="Click to play Knee Deep! In Love">
-      <img class="game-cover-bg-img"
-           src="https://img.itch.zone/aW1nLzI2NjYxMzQ3LnBuZw==/original/69KrCn.png"
-           alt="" aria-hidden="true" width="900" height="506" loading="lazy">
-      <div class="game-cover-overlay"></div>
-      <div class="game-cover-content">
-        <img class="game-cover-logo-img"
-             src="https://img.itch.zone/aW1nLzI2NjYxMzQ3LnBuZw==/original/69KrCn.png"
-             alt="Knee Deep! In Love" width="280" height="80" loading="lazy"
-             onerror="this.style.display='none'">
-        <div class="game-cover-stars">★★★★★</div>
-        <div class="game-cover-sub">Free Online Demo · Click to Play</div>
-        <button class="btn btn-primary" style="margin-top:6px" onclick="loadGame();event.stopPropagation()">
-          ▶ Play Now
-        </button>
-      </div>
-    </div>
-
-    <!-- iframe (lazy) -->
-    <div class="game-wrapper" id="game-wrapper">
-      <iframe
-        id="game-frame"
-        src=""
-        allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share"
-        allowfullscreen
-        title="Knee Deep! In Love – Play Free Online"
-        width="900" height="506">
-      </iframe>
-      <div class="game-footer">
-        <span class="game-footer-note">⏳ This game may load slowly. Please wait a moment.</span>
-        <button class="game-close-btn" onclick="closeGame()">✕ Close Game</button>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ══════════════════════ ABOUT + COMMENTS ══════════════════════ -->
 <section class="section about-comments" id="about">
@@ -1362,7 +1359,7 @@ footer {
 <!-- ══════════════════════ QUICK FACTS + LINKS ══════════════════════ -->
 <section class="section facts-links">
   <div class="container">
-    <h2 class="section-title">Game <span>Info</span> &amp; Official Links</h2>
+    <h2 class="section-title">Game <span>Info</span></h2>
     <div class="facts-links-inner">
       <div>
         <h3 style="font-family:'Nunito',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:18px;">Quick Facts</h3>
@@ -1403,67 +1400,6 @@ footer {
         </div>
       </div>
 
-      <div>
-        <h3 style="font-family:'Nunito',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:18px;">Official Links</h3>
-        <div class="links-grid">
-          <a class="link-card" href="https://comfortkuma.itch.io/knee-deep" target="_blank" rel="noopener">
-            <span class="link-icon">🎮</span>
-            <div class="link-info">
-              <div class="link-name">itch.io — Play &amp; Download</div>
-              <div class="link-desc">Official demo page by Comfort Kuma Studios</div>
-            </div>
-            <span class="link-arrow">↗</span>
-          </a>
-          <a class="link-card" href="https://store.steampowered.com/app/4313560/Knee_Deep_In_Love/" target="_blank" rel="noopener">
-            <span class="link-icon">🖥️</span>
-            <div class="link-info">
-              <div class="link-name">Steam — Wishlist Now</div>
-              <div class="link-desc">Wishlist the full game on Steam</div>
-            </div>
-            <span class="link-arrow">↗</span>
-          </a>
-          <a class="link-card" href="https://www.kickstarter.com/projects/seraphimstudios/knee-deep-in-love-a-yandere-otome-visual-novel" target="_blank" rel="noopener">
-            <span class="link-icon">🚀</span>
-            <div class="link-info">
-              <div class="link-name">Kickstarter Campaign</div>
-              <div class="link-desc">Support the full game development</div>
-            </div>
-            <span class="link-arrow">↗</span>
-          </a>
-          <a class="link-card" href="https://discord.com/invite/CUMZpxSzMt" target="_blank" rel="noopener">
-            <span class="link-icon">💬</span>
-            <div class="link-info">
-              <div class="link-name">Discord Community</div>
-              <div class="link-desc">Join fans and the dev team</div>
-            </div>
-            <span class="link-arrow">↗</span>
-          </a>
-          <a class="link-card" href="https://x.com/HeartstopTour" target="_blank" rel="noopener">
-            <span class="link-icon">🐦</span>
-            <div class="link-info">
-              <div class="link-name">Twitter / X</div>
-              <div class="link-desc">Dev updates and announcements</div>
-            </div>
-            <span class="link-arrow">↗</span>
-          </a>
-          <a class="link-card" href="https://www.tiktok.com/@comfortkumastudios" target="_blank" rel="noopener">
-            <span class="link-icon">🎵</span>
-            <div class="link-info">
-              <div class="link-name">TikTok</div>
-              <div class="link-desc">Behind-the-scenes and game clips</div>
-            </div>
-            <span class="link-arrow">↗</span>
-          </a>
-          <a class="link-card" href="https://comfortkumastudio.tumblr.com/" target="_blank" rel="noopener">
-            <span class="link-icon">📝</span>
-            <div class="link-info">
-              <div class="link-name">Tumblr Devlog</div>
-              <div class="link-desc">Art, dev updates, community posts</div>
-            </div>
-            <span class="link-arrow">↗</span>
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1544,16 +1480,6 @@ footer {
           <li><a href="#comments">Comments</a></li>
         </ul>
       </div>
-      <div>
-        <div class="footer-col-title">Official Links</div>
-        <ul class="footer-links">
-          <li><a href="https://comfortkuma.itch.io/knee-deep" target="_blank" rel="noopener">itch.io</a></li>
-          <li><a href="https://store.steampowered.com/app/4313560/Knee_Deep_In_Love/" target="_blank" rel="noopener">Steam</a></li>
-          <li><a href="https://discord.com/invite/CUMZpxSzMt" target="_blank" rel="noopener">Discord</a></li>
-          <li><a href="https://x.com/HeartstopTour" target="_blank" rel="noopener">Twitter / X</a></li>
-          <li><a href="https://www.kickstarter.com/projects/seraphimstudios/knee-deep-in-love-a-yandere-otome-visual-novel" target="_blank" rel="noopener">Kickstarter</a></li>
-        </ul>
-      </div>
     </div>
 
     <div class="tag-cloud">
@@ -1599,18 +1525,57 @@ function closeMobileMenu() { mobileMenu.classList.remove('open'); }
 
 // ── Iframe Lazy Load ──
 const IFRAME_URL = 'https://itch.io/embed-upload/17289707?color=0d0820';
+var loadTimerInterval = null;
+var loadStartTime = null;
+
 function loadGame() {
   const cover = document.getElementById('game-cover');
   const wrapper = document.getElementById('game-wrapper');
   const frame = document.getElementById('game-frame');
+  const banner = document.getElementById('game-loading-banner');
+  const timerEl = document.getElementById('load-timer');
+  const footerNote = document.getElementById('game-footer-note');
+
   cover.style.display = 'none';
   wrapper.style.display = 'block';
-  if (!frame.src || frame.src === window.location.href) { frame.src = IFRAME_URL; }
+
+  if (!frame.src || frame.src === window.location.href) {
+    // Set iframe src immediately (game starts loading in background)
+    frame.src = IFRAME_URL;
+
+    // Show loading banner on top of the black iframe
+    if (banner) banner.style.display = 'block';
+
+    // Start elapsed timer
+    loadStartTime = Date.now();
+    if (loadTimerInterval) clearInterval(loadTimerInterval);
+    loadTimerInterval = setInterval(function() {
+      var elapsed = Math.floor((Date.now() - loadStartTime) / 1000);
+      if (timerEl) timerEl.textContent = elapsed + 's elapsed';
+      // Auto-hide banner after 90s (game should be loading by then)
+      if (elapsed >= 90) {
+        clearInterval(loadTimerInterval);
+        if (banner) banner.style.display = 'none';
+        if (footerNote) footerNote.textContent = '🎮 If the game is still black, try pressing F5 to refresh.';
+      }
+    }, 1000);
+  }
+
   wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
 function closeGame() {
+  if (loadTimerInterval) clearInterval(loadTimerInterval);
   document.getElementById('game-cover').style.display = 'flex';
   document.getElementById('game-wrapper').style.display = 'none';
+  const frame = document.getElementById('game-frame');
+  frame.src = '';
+  const banner = document.getElementById('game-loading-banner');
+  if (banner) banner.style.display = 'none';
+  const timerEl = document.getElementById('load-timer');
+  if (timerEl) timerEl.textContent = '0s elapsed';
+  const footerNote = document.getElementById('game-footer-note');
+  if (footerNote) footerNote.textContent = '⏳ Loading… this may take 1–2 minutes. Please don\'t close the page.';
 }
 document.getElementById('game-cover').addEventListener('keydown', (e) => {
   if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadGame(); }
@@ -1625,6 +1590,14 @@ document.querySelectorAll('.faq-q').forEach((btn) => {
     if (!isOpen) item.classList.add('open');
   });
 });
+
+// ── Mobile Warning ──
+(function() {
+  if (/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) {
+    var w = document.getElementById('mobile-warning');
+    if (w) w.style.display = 'block';
+  }
+})();
 
 // ── Comment Form ──
 function escapeHtml(s) {
